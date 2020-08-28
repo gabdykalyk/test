@@ -1,0 +1,55 @@
+.registered {
+	width: 485px;
+	height: 406.3px;
+	padding-top: 178px;
+	display: none;
+
+	&__info {
+    margin-left: 44px;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+		letter-spacing: -0.46px;
+		line-height: 118%;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 114%;
+		margin-top: 11px;
+	}
+
+	&__footer {
+		margin-top: 152px;
+	}
+}
+
+.btn-error {
+	animation: .4s ease-in-out 0s normal none running trambling-animation, btn-error .7s;
+}
+
+@keyframes trambling-animation {
+   0%, 40%, 80%{
+		 transform: translateX(-3%); 
+   }
+   20%, 60%, 100% {
+		 transform: translateX(3%);
+   }
+}
+
+@keyframes btn-error {
+	0% {
+		background-color: #5A61ED;
+	}
+
+	50% {
+		background-color: red;
+	}
+
+	100% {
+		background-color: #5A61ED;
+	}
+}
