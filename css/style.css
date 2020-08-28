@@ -567,15 +567,8 @@ template {
           align-items: center;
 }
 
-.form__footer .form__login {
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.form__footer .footer__link {
-  color: #5A61ED;
-  text-decoration: underline;
-  font-weight: 500;
+.form__footer .footer__btn {
+  z-index: 2;
 }
 
 .form__footer .footer__btn .btn {
@@ -585,6 +578,19 @@ template {
   border: none;
   color: #ffffff;
   padding: 7px 25px;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer__link {
+  color: #5A61ED;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.form__login {
+  font-size: 13px;
+  font-weight: 300;
 }
 
 /* RADIO КНОПКИ */
@@ -608,6 +614,92 @@ template {
   font-size: 8px;
   margin-top: 3px;
   opacity: 0;
+}
+
+.registered {
+  width: 485px;
+  height: 406.3px;
+  padding-top: 178px;
+  display: none;
+}
+
+.registered__info {
+  margin-left: 44px;
+}
+
+.registered__title {
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.46px;
+  line-height: 118%;
+}
+
+.registered__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 114%;
+  margin-top: 11px;
+}
+
+.registered__footer {
+  margin-top: 152px;
+}
+
+.btn-error {
+  -webkit-animation: 0.4s ease-in-out 0s normal none running trambling-animation, btn-error 0.7s;
+          animation: 0.4s ease-in-out 0s normal none running trambling-animation, btn-error 0.7s;
+}
+
+@-webkit-keyframes trambling-animation {
+  0%, 40%, 80% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+
+  20%, 60%, 100% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+}
+
+@keyframes trambling-animation {
+  0%, 40%, 80% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+
+  20%, 60%, 100% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+}
+
+@-webkit-keyframes btn-error {
+  0% {
+    background-color: #5A61ED;
+  }
+
+  50% {
+    background-color: red;
+  }
+
+  100% {
+    background-color: #5A61ED;
+  }
+}
+
+@keyframes btn-error {
+  0% {
+    background-color: #5A61ED;
+  }
+
+  50% {
+    background-color: red;
+  }
+
+  100% {
+    background-color: #5A61ED;
+  }
 }
 
 *,
