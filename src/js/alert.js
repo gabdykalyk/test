@@ -12,13 +12,16 @@ function formValidation() {
 	let formEmail = document.querySelector('#formEmail')
 	let message = document.querySelector('.error-msg')
 	let password = document.querySelector('#formPassword')
+	let ok = document.querySelector('#ok')
 	formEmail.addEventListener('input', () => {
 		if (!formEmail.validity.valid) {
 			formEmail.classList.add('error')
+			ok.style.opacity = '0'
 		}
 
 		if (formEmail.validity.valid) {
 			formEmail.classList.remove('error')
+			ok.style.opacity = '1'
 		}
 	})
 

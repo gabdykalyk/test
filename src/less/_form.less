@@ -13,16 +13,14 @@
 
     &__row {
         display: flex;
-        margin-top: 16px;
+				margin-top: 16px;
+				position: relative;
 
         .form__item {
             display: flex;
             flex-direction: column;
             width: 235px;
 						z-index: 1;
-						animation: appear .5s linear;
-						animation-fill-mode: forwards; 
-						opacity: 0;
 
             &:not(:last-child) {
                 margin-right: 13px;
@@ -77,6 +75,6 @@
                     width: 76px;
                 }
             }
-        }
+				}
     }
 }

@@ -1,11 +1,20 @@
 .form__row .form__item .error {
     color: #FF2222;
-    border-bottom: 0.7px solid #FF2828;
+		border-bottom: 0.7px solid #FF2828;
+		transition: border-bottom .2s linear, color .2s linear;
 }
 
 .error-msg {
     color: #FF2222;
     font-size: 8px;
     margin-top: 3px;
-    opacity: 0;
+		opacity: 0;
+		transition: opacity .2s linear;
+}
+
+.ok {
+	position: absolute;
+	top: 22px;
+	right: -1px;
+	transition: opacity .2s linear;
 }

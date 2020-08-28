@@ -403,6 +403,7 @@ template {
   display: -ms-flexbox;
   display: flex;
   margin-top: 16px;
+  position: relative;
 }
 
 .form__row .form__item {
@@ -415,11 +416,6 @@ template {
           flex-direction: column;
   width: 235px;
   z-index: 1;
-  -webkit-animation: appear 0.5s linear;
-          animation: appear 0.5s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
 }
 
 .form__row .form__item:not(:last-child) {
@@ -612,6 +608,9 @@ template {
 .form__row .form__item .error {
   color: #FF2222;
   border-bottom: 0.7px solid #FF2828;
+  -webkit-transition: border-bottom 0.2s linear, color 0.2s linear;
+  -o-transition: border-bottom 0.2s linear, color 0.2s linear;
+  transition: border-bottom 0.2s linear, color 0.2s linear;
 }
 
 .error-msg {
@@ -619,6 +618,18 @@ template {
   font-size: 8px;
   margin-top: 3px;
   opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.ok {
+  position: absolute;
+  top: 22px;
+  right: -1px;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .registered {
@@ -745,6 +756,84 @@ template {
             transform: translateY(0);
     opacity: 1;
   }
+}
+
+.form__row:nth-child(1) > .form__item:nth-child(1) {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.form__row:nth-child(1) > .form__item:nth-child(2) {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.form__row:nth-child(2) > .form__item:nth-child(1) {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  opacity: 0;
+}
+
+.form__row:nth-child(2) > .form__item:nth-child(2) {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.form__row:nth-child(3) > .form__item:nth-child(1) {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  opacity: 0;
+}
+
+.form__row:nth-child(3) > .form__item:nth-child(2) {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  opacity: 0;
+}
+
+.form__row:nth-child(4) > .form__item:nth-child(1) {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  opacity: 0;
+}
+
+.form__row:nth-child(4) > .form__item:nth-child(2) {
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  opacity: 0;
 }
 
 *,
