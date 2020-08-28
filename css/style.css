@@ -415,6 +415,11 @@ template {
           flex-direction: column;
   width: 235px;
   z-index: 1;
+  -webkit-animation: appear 0.5s linear;
+          animation: appear 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .form__row .form__item:not(:last-child) {
@@ -702,6 +707,46 @@ template {
   }
 }
 
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -719,6 +764,11 @@ li {
 a {
   text-decoration: none;
   color: unset;
+}
+
+@font-face {
+  font-family: 'Work Sans', sans-serif;
+  src: url(../fonts/WorkSans-Light.otf);
 }
 
 body {
