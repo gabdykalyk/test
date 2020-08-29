@@ -74,7 +74,7 @@ function btnError() {
 
 //JSON OK
 function okJson() {
-	var requestURL = '../JSON/server-ok.json';
+	var requestURL = '../json/server-ok.json';
 	var request = new XMLHttpRequest();
 	request.open('GET', requestURL);
 	request.responseType = 'json';
@@ -90,7 +90,7 @@ function okJson() {
 
 //JSON ERROR
 function errorJson() {
-	var requestURL = '../JSON/server-error.json';
+	var requestURL = '../json/server-error.json';
 	var request = new XMLHttpRequest();
 	request.open('GET', requestURL);
 	request.responseType = 'json';
