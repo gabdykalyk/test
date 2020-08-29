@@ -104,10 +104,16 @@ function errorJson() {
 	}
 }
 
-//SEND OK
+//SEND
 let complete = document.querySelector('#completeBtn')
+let formEmail = document.querySelector('#formEmail')
+let password = document.querySelector('#formPassword')
 complete.addEventListener('click', () => {
-	okJson()
-	// errorJson()
+	if (formEmail.validity.valid && password.validity.valid) {
+		okJson()
+	}
+	if (!formEmail.validity.valid || !password.validity.valid) {
+		errorJson()
+	}
 })
 ;
