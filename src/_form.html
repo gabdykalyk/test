@@ -16,50 +16,50 @@
 						Use the form below to create your account.
 				</div>
 			</div>
-			<form id="form" action="">
+			<form id="form">
 				<div class="form__row">
 					<div class="form__item">
-						<label class="form__label" for="">First Name</label>
+						<label class="form__label">First Name</label>
 						<input class="form__input" type="text" value="Alice">
 					</div>
 					<div class="form__item">
-						<label class="form__label" for="">Last Name</label>
+						<label class="form__label">Last Name</label>
 						<input class="form__input" type="text" value="Miller">
 					</div>
 				</div>
 				<div class="form__row">
 					<div class="form__item form__item--select">
-						<label class="form__label select__label" for="">Nationality
+						<label class="form__label select__label">Nationality
 							<select class="form__input form__select">
-								<option value="">American</option>
-								<option value="">Russian</option>
-								<option value="">Kazakh</option>
+								<option>American</option>
+								<option>Russian</option>
+								<option>Kazakh</option>
 							</select>
 						</label>
 					</div>
 					<div class="form__item">
-						<label class="form__label" for="">E-mail</label>
+						<label class="form__label">E-mail</label>
 						<input id="formEmail" class="form__input" type="email" value="alice.miller@yahoo.com" required>
-						<img id="ok" class="ok" src="./img/ok.svg" alt="">
+						<img id="ok" class="ok" src="./img/ok.svg" alt="Here must be ok image">
 					</div>
 				</div>
 				<div class="form__row">
 					<div class="form__item">
-						<label class="form__label" for="">Date of Birth</label>
+						<label class="form__label">Date of Birth</label>
 						<div class="form__birth">
 							<div class="form__item--day ">
 								<select class="form__input form__select form__select--day">
-										<option value="">21</option>
+										<option>21</option>
 								</select>
 							</div>
 							<div class="form__item--month">
 								<select class="form__input form__select form__select--month">
-										<option value="">December</option>
+										<option>December</option>
 								</select>
 							</div>
 							<div class="form__item--year">
 								<select class="form__input form__select form__select--year">
-										<option value="">1995</option>
+										<option>1995</option>
 								</select>
 							</div>
 						</div>
@@ -78,18 +78,18 @@
 				</div>
 				<div class="form__row">
 					<div class="form__item">
-						<label class="form__label" for="">Password</label>
+						<label class="form__label">Password</label>
 						<input id="formPassword" class="form__input" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 						<span class="error-msg">Пароль должен содержать от 8 символов, заглавные и строчные буквы, а также цифры</span>
 					</div>
 					<div class="form__item">
-						<label class="form__label" for="">Confirm Password</label>
+						<label class="form__label">Confirm Password</label>
 						<input class="form__input" type="password">
 					</div>
 				</div>
 				<div class="form__footer">
 					<div class="form__login">
-						Have an account? <a class="footer__link" href="">Login</a>
+						Have an account? <a class="footer__link" href="#">Login</a>
 					</div>
 					<div class="footer__btn">
 						<button id="completeBtn" type="button" class="btn">Complete Signup</button>
