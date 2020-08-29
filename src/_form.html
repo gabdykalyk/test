@@ -8,7 +8,7 @@
 	</div>
 	<div class="form__main">
 		<div id="formContainer" class="form__container">
-			<div class="form__title">
+			<div id="formTitle" class="form__title">
 				<div class="form__question">
 						New user?
 				</div>
@@ -16,7 +16,7 @@
 						Use the form below to create your account.
 				</div>
 			</div>
-			<form action="">
+			<form id="form" action="">
 				<div class="form__row">
 					<div class="form__item">
 						<label class="form__label" for="">First Name</label>
@@ -79,12 +79,12 @@
 				<div class="form__row">
 					<div class="form__item">
 						<label class="form__label" for="">Password</label>
-						<input id="formPassword" class="form__input" type="text" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+						<input id="formPassword" class="form__input" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 						<span class="error-msg">Пароль должен содержать от 8 символов, заглавные и строчные буквы, а также цифры</span>
 					</div>
 					<div class="form__item">
 						<label class="form__label" for="">Confirm Password</label>
-						<input class="form__input" type="text">
+						<input class="form__input" type="password">
 					</div>
 				</div>
 				<div class="form__footer">
@@ -98,26 +98,11 @@
 			</form>
 		</div>
 
-		<div class="banner">
+		<div id="banner" class="banner">
 				<object id="back" type="image/svg+xml" data="./img/back.svg"></object>
 
 		</div>
 
-		<div id="registered" class="registered">
-			<div class="registered__info">
-				<div class="registered__title">
-					Thank You!
-				</div>
-				<div class="registered__text">
-					you registered!
-				</div>
-			</div>
-			<div class="registered__footer">
-				<div class="form__login">
-					Have an account? <a class="footer__link" href="">Login</a>
-				</div>
-			</div>
-		</div>
 	</div>
 
 	

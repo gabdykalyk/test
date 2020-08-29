@@ -7,14 +7,17 @@ let path = {
         css: project_folder + '/css/',
         js: project_folder + '/js/',
         img: project_folder + '/img/',
-        fonts: project_folder + '/fonts/',
+				fonts: project_folder + '/fonts/',
+				json: project_folder + '/json/',
+
     },
     src: {
         html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
         css: source_folder + '/less/style.less',
         js: source_folder + '/js/script.js',
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-        fonts: source_folder + '/fonts/*.ttf',
+				fonts: source_folder + '/fonts/*.ttf',
+				json: source_folder + '/json/*.json',
     },
     watch: {
         html: source_folder + '/**/*.html',
@@ -64,6 +67,11 @@ function html() {
         .pipe(browsersync.stream())
 }
 
+function json() {
+	return src(path.src.json)
+		.pipe(fileinclude())
+		.pipe(dest(path.build.json))
+}
 
 function css() {
     return src(path.src.css)
@@ -139,14 +147,6 @@ function fonts(params) {
         .pipe(dest(path.build.fonts))
 }
 
-// gulp.task('otf2ttf', function () {
-//     return src([source_folder + '/fonts/*.otf'])
-//         .pipe(fonter({
-//             formats: ['ttf']
-//         }))
-//         .pipe(dest(source_folder + '/fonts/'));
-// }
-
 gulp.task('svgSprite', function () {
     return gulp.src([source_folder + '/iconsprite/*.svg'])
         .pipe(svgSprite({
@@ -170,9 +170,10 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, json));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.json = json;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;

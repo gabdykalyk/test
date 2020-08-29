@@ -388,6 +388,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .form__main {
@@ -636,7 +637,11 @@ template {
   width: 485px;
   height: 406.3px;
   padding-top: 178px;
-  display: none;
+  -webkit-animation: registered 0.5s linear;
+          animation: registered 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .registered__info {
@@ -664,58 +669,6 @@ template {
 .btn-error {
   -webkit-animation: 0.4s ease-in-out 0s normal none running trambling-animation, btn-error 0.7s;
           animation: 0.4s ease-in-out 0s normal none running trambling-animation, btn-error 0.7s;
-}
-
-@-webkit-keyframes trambling-animation {
-  0%, 40%, 80% {
-    -webkit-transform: translateX(-3%);
-            transform: translateX(-3%);
-  }
-
-  20%, 60%, 100% {
-    -webkit-transform: translateX(3%);
-            transform: translateX(3%);
-  }
-}
-
-@keyframes trambling-animation {
-  0%, 40%, 80% {
-    -webkit-transform: translateX(-3%);
-            transform: translateX(-3%);
-  }
-
-  20%, 60%, 100% {
-    -webkit-transform: translateX(3%);
-            transform: translateX(3%);
-  }
-}
-
-@-webkit-keyframes btn-error {
-  0% {
-    background-color: #5A61ED;
-  }
-
-  50% {
-    background-color: red;
-  }
-
-  100% {
-    background-color: #5A61ED;
-  }
-}
-
-@keyframes btn-error {
-  0% {
-    background-color: #5A61ED;
-  }
-
-  50% {
-    background-color: red;
-  }
-
-  100% {
-    background-color: #5A61ED;
-  }
 }
 
 @-webkit-keyframes appear {
@@ -834,6 +787,98 @@ template {
   -webkit-animation-delay: 3.5s;
           animation-delay: 3.5s;
   opacity: 0;
+}
+
+@-webkit-keyframes trambling-animation {
+  0%, 40%, 80% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+
+  20%, 60%, 100% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+}
+
+@keyframes trambling-animation {
+  0%, 40%, 80% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+
+  20%, 60%, 100% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+}
+
+@-webkit-keyframes btn-error {
+  0% {
+    background-color: #5A61ED;
+  }
+
+  50% {
+    background-color: red;
+  }
+
+  100% {
+    background-color: #5A61ED;
+  }
+}
+
+@keyframes btn-error {
+  0% {
+    background-color: #5A61ED;
+  }
+
+  50% {
+    background-color: red;
+  }
+
+  100% {
+    background-color: #5A61ED;
+  }
+}
+
+@-webkit-keyframes registered {
+  0% {
+    -webkit-transform: translateY(8%);
+            transform: translateY(8%);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateY(4%);
+            transform: translateY(4%);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes registered {
+  0% {
+    -webkit-transform: translateY(8%);
+            transform: translateY(8%);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateY(4%);
+            transform: translateY(4%);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 *,

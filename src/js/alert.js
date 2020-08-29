@@ -1,10 +1,10 @@
 // SVG ANIMATION
 const svg = new Vivus(
-    'back',
-    {
-        type: 'delayed',
-        duration: 400,
-    },
+	'back',
+	{
+		type: 'delayed',
+		duration: 400,
+	},
 );
 
 // VALIDATION
@@ -42,23 +42,71 @@ formValidation()
 
 // COMPLETE
 function registered() {
-	let complete = document.querySelector('#completeBtn')
 	let formContainer = document.querySelector('#formContainer')
-	let registered = document.querySelector('#registered')
-	complete.addEventListener('click', (e) => {
-		e.preventDefault()
-		formContainer.style.display = 'none'
-		registered.style.display = 'block'
-	})
+	let banner = document.querySelector('#banner')
+		banner.style.display = 'none'
+		formContainer.innerHTML = `<div id="registered" class="registered">
+			<div class="registered__info">
+				<div class="registered__title">
+					Thank You!
+				</div>
+				<div class="registered__text">
+					you registered!
+				</div>
+			</div>
+			<div class="registered__footer">
+				<div class="form__login">
+					Have an account? <a class="footer__link" href="">Login</a>
+				</div>
+			</div>
+		</div>`
 }
-
-registered()
 
 function btnError() {
 	let complete = document.querySelector('#completeBtn')
-	complete.addEventListener('click', (e) => {
-		e.preventDefault()
-		complete.classList.toggle('btn-error')
-	})
+		complete.classList.add('btn-error')
+
+		function removeError() {
+			complete.classList.remove('btn-error')
+		}
+		setTimeout(removeError, 1000);
 }
 
+//JSON OK
+function okJson() {
+	var requestURL = '../JSON/server-ok.json';
+	var request = new XMLHttpRequest();
+	request.open('GET', requestURL);
+	request.responseType = 'json';
+	request.send();
+	request.onload = function () {
+		var answer = request.response;
+		console.log(answer.message)
+		if (answer.answer === 'ok') {
+			registered()
+		}
+	}
+}
+
+//JSON ERROR
+function errorJson() {
+	var requestURL = '../JSON/server-error.json';
+	var request = new XMLHttpRequest();
+	request.open('GET', requestURL);
+	request.responseType = 'json';
+	request.send();
+	request.onload = function () {
+		var answer = request.response;
+		console.log(answer.message)
+		if (answer.answer === 'error') {
+			btnError()
+		}
+	}
+}
+
+//SEND OK
+let complete = document.querySelector('#completeBtn')
+complete.addEventListener('click', () => {
+	okJson()
+	// errorJson()
+})

@@ -69,3 +69,43 @@
 	animation-delay: 3.5s;
 	opacity: 0;
 }
+
+@keyframes trambling-animation {
+   0%, 40%, 80%{
+		 transform: translateX(-3%); 
+   }
+   20%, 60%, 100% {
+		 transform: translateX(3%);
+   }
+}
+
+@keyframes btn-error {
+	0% {
+		background-color: #5A61ED;
+	}
+
+	50% {
+		background-color: red;
+	}
+
+	100% {
+		background-color: #5A61ED;
+	}
+}
+
+@keyframes registered {
+	0% {
+		transform: translateY(8%);
+		opacity: 0;
+	}
+
+	50% {
+		transform: translateY(4%);
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
