@@ -1,1 +1,127 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">		<title>Gulp</title>		<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400;500;700&display=swap"			rel="stylesheet">    <link rel="stylesheet" href="css/style.min.css"></head><body>    <div class="form">	<div class="form__side">		<div class="sign-up">				<p>						Sign up				</p>		</div>	</div>	<div class="form__main">		<div id="formContainer" class="form__container">			<div id="formTitle" class="form__title">				<div class="form__question">						New user?				</div>				<div class="form__text">						Use the form below to create your account.				</div>			</div>			<form id="form">				<div class="form__row">					<div class="form__item">						<label class="form__label">First Name</label>						<input class="form__input" type="text" value="Alice">					</div>					<div class="form__item">						<label class="form__label">Last Name</label>						<input class="form__input" type="text" value="Miller">					</div>				</div>				<div class="form__row">					<div class="form__item form__item--select">						<label class="form__label select__label">Nationality							<select class="form__input form__select">								<option>American</option>								<option>Russian</option>								<option>Kazakh</option>							</select>						</label>					</div>					<div class="form__item">						<label class="form__label">E-mail</label>						<input id="formEmail" class="form__input" type="email" value="alice.miller@yahoo.com" required>						<picture><source srcset="./img/ok.svg" type="image/webp"><img id="ok" class="ok" src="./img/ok.svg" alt="Here must be ok image"></picture>					</div>				</div>				<div class="form__row">					<div class="form__item">						<label class="form__label">Date of Birth</label>						<div class="form__birth">							<div class="form__item--day ">								<select class="form__input form__select form__select--day">										<option>21</option>								</select>							</div>							<div class="form__item--month">								<select class="form__input form__select form__select--month">										<option>December</option>								</select>							</div>							<div class="form__item--year">								<select class="form__input form__select form__select--year">										<option>1995</option>								</select>							</div>						</div>					</div>					<div class="form__item">						<label class="form__label">Gender</label>						<div class="form__radio">							<label class="form__male" for="male">								<input type="radio" id="male" name="gender"> Male							</label>							<label for="female">							<input type="radio" id="female" name="gender" checked> Female							</label>						</div>					</div>				</div>				<div class="form__row">					<div class="form__item">						<label class="form__label">Password</label>						<input id="formPassword" class="form__input" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">						<span class="error-msg">Пароль должен содержать от 8 символов, заглавные и строчные буквы, а также цифры</span>					</div>					<div class="form__item">						<label class="form__label">Confirm Password</label>						<input class="form__input" type="password">					</div>				</div>				<div class="form__footer">					<div class="form__login">						Have an account? <a class="footer__link" href="#">Login</a>					</div>					<div class="footer__btn">						<button id="completeBtn" type="button" class="btn">Complete Signup</button>					</div>				</div>			</form>		</div>		<div id="banner" class="banner">				<object id="back" type="image/svg+xml" data="./img/back.svg"></object>		</div>	</div>	</div>    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.js"        integrity="sha512-JDgkxcdf7oYN/lR29Dzzw17b5Rv42eJ4Vj8aysjr+YpqwaURHrcR1/wGmyIBlsXK55Wsq3TW9tWoDzIou2q3qw=="        crossorigin="anonymous"></script>    <script src="js/script.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Gulp</title>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400;500;700&display=swap"
+			rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="form">
+	<div class="form__side">
+		<div class="sign-up">
+				<p>
+						Sign up
+				</p>
+		</div>
+	</div>
+	<div class="form__main">
+		<div id="formContainer" class="form__container">
+			<div id="formTitle" class="form__title">
+				<div class="form__question">
+						New user?
+				</div>
+				<div class="form__text">
+						Use the form below to create your account.
+				</div>
+			</div>
+			<form id="form">
+				<div class="form__row">
+					<div class="form__item">
+						<label class="form__label">First Name</label>
+						<input class="form__input" type="text" value="Alice">
+					</div>
+					<div class="form__item">
+						<label class="form__label">Last Name</label>
+						<input class="form__input" type="text" value="Miller">
+					</div>
+				</div>
+				<div class="form__row">
+					<div class="form__item form__item--select">
+						<label class="form__label select__label">Nationality
+							<select class="form__input form__select">
+								<option>American</option>
+								<option>Russian</option>
+								<option>Kazakh</option>
+							</select>
+						</label>
+					</div>
+					<div class="form__item">
+						<label class="form__label">E-mail</label>
+						<input id="formEmail" class="form__input" type="email" value="alice.miller@yahoo.com" required>
+						<picture><source srcset="./img/ok.svg" type="image/webp"><img id="ok" class="ok" src="./img/ok.svg" alt="Here must be ok image"></picture>
+					</div>
+				</div>
+				<div class="form__row">
+					<div class="form__item">
+						<label class="form__label">Date of Birth</label>
+						<div class="form__birth">
+							<div class="form__item--day ">
+								<select class="form__input form__select form__select--day">
+										<option>21</option>
+								</select>
+							</div>
+							<div class="form__item--month">
+								<select class="form__input form__select form__select--month">
+										<option>December</option>
+								</select>
+							</div>
+							<div class="form__item--year">
+								<select class="form__input form__select form__select--year">
+										<option>1995</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form__item">
+						<label class="form__label">Gender</label>
+						<div class="form__radio">
+							<label class="form__male" for="male">
+								<input type="radio" id="male" name="gender"> Male
+							</label>
+							<label for="female">
+							<input type="radio" id="female" name="gender" checked> Female
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form__row">
+					<div class="form__item">
+						<label class="form__label">Password</label>
+						<input id="formPassword" class="form__input" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+						<span class="error-msg">Пароль должен содержать от 8 символов, заглавные и строчные буквы, а также цифры</span>
+					</div>
+					<div class="form__item">
+						<label class="form__label">Confirm Password</label>
+						<input class="form__input" type="password">
+					</div>
+				</div>
+				<div class="form__footer">
+					<div class="form__login">
+						Have an account? <a class="footer__link" href="#">Login</a>
+					</div>
+					<div class="footer__btn">
+						<button id="completeBtn" type="button" class="btn">Complete Signup</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div id="banner" class="banner">
+				<object id="back" type="image/svg+xml" data="./img/back.svg"></object>
+
+		</div>
+
+	</div>
+
+	
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.js"
+        integrity="sha512-JDgkxcdf7oYN/lR29Dzzw17b5Rv42eJ4Vj8aysjr+YpqwaURHrcR1/wGmyIBlsXK55Wsq3TW9tWoDzIou2q3qw=="
+        crossorigin="anonymous"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>
